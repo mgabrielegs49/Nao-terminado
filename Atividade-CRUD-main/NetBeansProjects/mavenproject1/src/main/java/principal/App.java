@@ -23,7 +23,6 @@ public class App {
         p.adicionar();
         
         ArrayList<Produto> produtos = Produto.listar();
-        
         for(Produto produto: produtos){
         String marca = produto.getMarca();
         double preco = produto.getPreco();

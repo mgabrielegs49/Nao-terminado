@@ -4,10 +4,19 @@
  */
 package metodos;
 
+import classes.Cliente;
+import classes.Produto;
+
 /**
  *
  * @author Maria Gabriele
  */
 public class Excluir {
+    Produto p = new Produto(1);
+        p.excluir();
     
+    Cliente c = new Cliente(1);
+        c.excluir();
+        
+        
 }
