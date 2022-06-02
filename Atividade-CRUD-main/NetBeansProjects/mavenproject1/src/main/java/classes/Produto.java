@@ -8,10 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-/**
- *
- * @author Aluno
- */
+
 public class Produto {
 
     protected int id;
@@ -21,7 +18,7 @@ public class Produto {
     protected double preco;
 
     public Produto(int id){
-        if(id>0){
+        if(id > 0){
             String sql = "SELECT * FROM produto WHERE id = ?";
             
             try{
@@ -107,7 +104,7 @@ public class Produto {
             ResultSet registros = stmt.executeQuery();
             
             while(registros.next()){
-            Produto temp = new Produto();
+            Produto temp = new Produto(0);
             temp.setMarca(registros.getString("marca"));
             temp.setPreco(registros.getDouble("preco"));
             temp.setId(registros.getInt("id"));

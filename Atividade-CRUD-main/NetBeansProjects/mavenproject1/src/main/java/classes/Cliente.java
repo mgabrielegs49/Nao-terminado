@@ -17,7 +17,7 @@ public class Cliente {
     protected int idade;
     protected String username;
     
-    public Cliente(int id=0){
+    public Cliente(int id){
         if(id > 0){
             String sql = "SELECT * FROM cliente WHERE id = ?";
             
@@ -103,7 +103,7 @@ public class Cliente {
             ResultSet registros = stmt.executeQuery();
             
             while(registros.next()){
-            Cliente temp = new Cliente();
+            Cliente temp = new Cliente(0);
             temp.setId(registros.getInt("id"));
             temp.setNome(registros.getString("nome"));
             temp.setEmail(registros.getString("email"));
